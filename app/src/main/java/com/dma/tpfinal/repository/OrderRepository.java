@@ -14,6 +14,7 @@ import java.util.List;
 public class OrderRepository {
     OrderDao myDao;
     LiveData<List<Order>> myList;
+    long orderId;
 
     public OrderRepository(Application application){
         DatabaseApp mydb = DatabaseApp.getInstance(application);
@@ -32,9 +33,10 @@ public class OrderRepository {
 
     //insert
 
-    public void insertOrder(Order order){
+    public long insertOrder(Order order){
 
         new InsertAsyncTask(myDao).execute(order);
+        return orderId;
     }
     //le corps du processus
     private  class  InsertAsyncTask extends AsyncTask<Order,Void,Void> {
@@ -45,7 +47,7 @@ public class OrderRepository {
         }
         @Override
         protected Void doInBackground(Order... orders) {
-            mydao.addOrder(orders[0]);
+            orderId = mydao.addOrder(orders[0]);
             return null;
         }
     }

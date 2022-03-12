@@ -16,6 +16,8 @@ public class CrossRef {
     public long productIdRef;
     @ColumnInfo(index = true, name ="orderIdRef")
     public long orderIdRef;
+    @ColumnInfo(name = "quantity")
+    public int quantity;
 
 
     public void CrossRef(long productId, long orderId){
@@ -41,6 +43,12 @@ public class CrossRef {
     public void setCrossRef(long orderIdRef, long productIdRef){
         this.productIdRef = productIdRef;
         this.orderIdRef =orderIdRef;
+    }
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+    public int getQuantity() {
+        return this.quantity;
     }
 }
 

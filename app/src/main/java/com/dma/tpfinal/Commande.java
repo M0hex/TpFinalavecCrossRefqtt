@@ -74,11 +74,15 @@ public class Commande extends AppCompatActivity {
                 Intent intent=new Intent(Commande.this,ListeCommande.class);
                 intent.putExtra("count",count);
                 startActivity(intent);*/
+
+                // une partie statique
                 Product product=new Product("Objet2",200,"Objet");
                 productModelView.addProduct(product);
                 Order order = new Order();
-                order.setOrderQuantity(Integer.parseInt(quantite.getText().toString()));
+                // ici tu utilise quantity de OPCrossRefTable
+              //  order.setquantity(Integer.parseInt(quantite.getText().toString()));
                 order.setOrderDate(order.getOrderDatef());
+
                 orderModelView.addOrder(order);
                 Toast.makeText(getApplicationContext(),"achat effectuer",Toast.LENGTH_LONG).show();
             }

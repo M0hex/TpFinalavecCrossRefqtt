@@ -28,6 +28,6 @@ public class OrderModelView extends AndroidViewModel {
         return mListOrder;
     }
 
-    public void addOrder(Order order) {
-        mOrderRepository.insertOrder(order);}
+    public long addOrder(Order order) {
+       return mOrderRepository.insertOrder(order);}
 }

@@ -17,8 +17,7 @@ public class Order implements Serializable {
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(index = true, name = "orderIdRef")
     public long orderIdRef;
-    @ColumnInfo(name = "quantity")
-    public int orderQuantity;
+
     public String orderDate;
 
     public Order(){}
@@ -39,9 +38,7 @@ public class Order implements Serializable {
 
 
 
-    public void setOrderQuantity(int orderQuantity) {
-        this.orderQuantity = orderQuantity;
-    }
+
 
     public void setOrderID(long orderId) {
         this.orderIdRef = orderId;
@@ -51,7 +48,5 @@ public class Order implements Serializable {
         return orderIdRef;
     }
 
-    public int getOrderQuantity() {
-        return orderQuantity;
-    }
+
 }

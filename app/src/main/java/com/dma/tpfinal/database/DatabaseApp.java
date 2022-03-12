@@ -12,7 +12,7 @@ import com.dma.tpfinal.entities.CrossRef;
 import com.dma.tpfinal.entities.Order;
 import com.dma.tpfinal.entities.Product;
 
-@androidx.room.Database(entities = {Product.class, Order.class, CrossRef.class},version = 1,exportSchema = false)
+@androidx.room.Database(entities = {Product.class, Order.class, CrossRef.class},version = 2,exportSchema = false)
 public abstract class DatabaseApp extends RoomDatabase {
 
     public abstract OrderDao orderDao();

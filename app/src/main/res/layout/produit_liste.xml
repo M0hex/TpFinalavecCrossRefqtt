@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:stretchColumns="1">
+    <TextView
+        android:textColor="#808080"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:id="@+id/et_nom_produit"
+        />
+    <TableRow>
+        <TextView
+            android:text="Prix:"
+            android:textColor="#808080"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/et_prix"
+            android:textColor="#2196F3"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:text="Quantité:"
+            android:textColor="#808080"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/et_quantite"
+            android:textColor="#2196F3"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            />
+    </TableRow>
+</TableLayout>
